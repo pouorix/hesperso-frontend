@@ -1,4 +1,4 @@
-const SERVER = "https://api.mazar.app/api/v1";
+const SERVER = "http://46.102.130.242:9092/api/v1";
 function generateHeader(object) {
   const header = {};
   if (
