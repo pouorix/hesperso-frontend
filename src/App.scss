@@ -1,12 +1,15 @@
 $primary: #FF6600;
 .hesperso {
+  // height: 100vh;
+  background-color: black;
   .header {
     width: 100%;
   }
 
   .swiper-main {
     padding: 0 32px;
-
+// background-color: $primary;
+margin-top: 10px;
     .slider-item {
       padding: 12px 0;
       display: flex;
@@ -29,7 +32,7 @@ $primary: #FF6600;
 
       p {
         margin: 6px 0 0 0;
-        color: #4b4b4b;
+        color: $primary;
         font-size: 14px;
       }
 
@@ -55,7 +58,7 @@ $primary: #FF6600;
 
   .logo-container {
     margin: 8px 0 12px;
-    border-top: solid 1px #989898;
+    border-top: solid 1px $primary;
     width: 100%;
     padding-top: 16px;
     display: flex;
@@ -68,15 +71,18 @@ $primary: #FF6600;
     flex-direction: column;
     //width: 100%;
     padding: 0 4px;
-
-    .items {
+    .itemsbox {
       display: flex;
       //width: 100%;
-      background-color: #CDD1D0;
-      margin-bottom: 6px;
+      background-color: transparent;
+      margin-bottom: 20px;
+     border-radius: 5px;
       height: 100px;
       max-height: 100px;
-
+      
+      box-shadow: 2px 2px 2px 2px $primary;
+      margin-right: 7px;
+      margin-left: 7px;
       img {
         height: 100%;
         //max-height: 100px;
@@ -96,7 +102,7 @@ $primary: #FF6600;
 
         h2 {
           font-size: 14px;
-          color: black;
+          color: white;
           font-weight: 600;
           margin: 0 0 2px 0;
         }
@@ -105,7 +111,67 @@ $primary: #FF6600;
           margin: 0;
           font-size: 11px;
           font-weight: 400;
-          color: #333333;
+          color: rgba(white,0.7);
+        }
+
+        span {
+          flex: 1;
+        }
+
+        .price-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 100%;
+
+          p {
+            margin: 0;
+            font-size: 11px;
+            font-weight: 400;
+            color: white;
+          }
+        }
+      }
+    }
+    .items {
+      display: flex;
+      //width: 100%;
+      background-color: transparent;
+      margin-bottom: 10px;
+     border-radius: 5px;
+      height: 100px;
+      max-height: 100px;
+      
+      // box-shadow: 2px 2px 2px 2px $primary;
+      img {
+        height: 100%;
+        //max-height: 100px;
+        max-width: 120px;
+        min-width: 120px;
+        width: 100%;
+        object-fit: cover;
+        margin-left: 6px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        //height: 100%;
+        padding: 6px;
+
+        h2 {
+          font-size: 14px;
+          color: white;
+          font-weight: 600;
+          margin: 0 0 2px 0;
+        }
+
+        h4 {
+          margin: 0;
+          font-size: 11px;
+          font-weight: 400;
+          color: rgba(white,0.7);
         }
 
         span {
@@ -127,6 +193,7 @@ $primary: #FF6600;
         }
       }
     }
+
   }
 
   .loader-container {

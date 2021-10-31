@@ -1,4 +1,6 @@
 body {
+// height: 100%;
+// background-color: black;
     padding: 0;
     margin: 0;
     &[dir='ltr'] {
@@ -18,4 +20,11 @@ body {
             text-align: right;
         }
     }
+
+      
 }
+html{
+    background-color: black;
+
+}
+

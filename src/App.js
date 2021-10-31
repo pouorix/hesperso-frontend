@@ -15,186 +15,7 @@ import { get, responseValidator } from "./api";
 import EmptyPic from "./images/empty.jpg";
 
 function App() {
-  // const tempCategory = [
-  //   {
-  //     id: 1,
-  //     imagePath:
-  //       "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg",
-  //     title: "قهوه سرد",
-  //     partner: "hesperso",
-  //   },
-  //   {
-  //     id: 2,
-  //     imagePath:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Homemade_Dalgona_Coffee.jpg/1200px-Homemade_Dalgona_Coffee.jpg",
-  //     title: "قهوه تلخ",
-  //     partner: "hesperso",
-  //   },
-  //   {
-  //     id: 3,
-  //     imagePath:
-  //       "https://media.gettyimages.com/photos/closeup-of-coffee-in-cup-picture-id1032751904?s=612x612",
-  //     title: "اسپرسو",
-  //     partner: "hesperso",
-  //   },
-  //   {
-  //     id: 4,
-  //     imagePath:
-  //       "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2FPhoto%2FRecipes%2F2020-07-how-to-make-a-milkshake-at-home%2F2020-06-08_AT-K19388",
-  //     title: "انواع شیک",
-  //     partner: "hesperso",
-  //   },
-  //   {
-  //     id: 5,
-  //     imagePath:
-  //       "https://veenaazmanov.com/wp-content/uploads/2017/03/Chocolate-Milkshake-Recipe2.jpg",
-  //     title: "اسموتی",
-  //     partner: "hesperso",
-  //   },
-  //   {
-  //     id: 6,
-  //     imagePath:
-  //       "https://sugarspunrun.com/wp-content/uploads/2019/01/Best-Cheesecake-Recipe-2-1-of-1-4.jpg",
-  //     title: "کیک",
-  //     partner: "hesperso",
-  //   },
-  // ];
-  // const tempItems = [
-  //   {
-  //     id: 1,
-  //     title: "فهوه دمی",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است نوشدنی ع است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "فهوه ترک",
-  //     description: "قهوه دمی یک نوشدنی عالی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Homemade_Dalgona_Coffee.jpg/1200px-Homemade_Dalgona_Coffee.jpg",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "فهوه اسپرسو",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://media.gettyimages.com/photos/closeup-of-coffee-in-cup-picture-id1032751904?s=612x612",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "شیک موز",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2FPhoto%2FRecipes%2F2020-07-how-to-make-a-milkshake-at-home%2F2020-06-08_AT-K19388",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 1,
-  //     title: "فهوه دمی",
-  //     description:
-  //       "قهوه دمی یک نوشدنی علی با بهترین گیفیت است نوشدنی علی با بهترین گیفیت است نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "فهوه ترک",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Homemade_Dalgona_Coffee.jpg/1200px-Homemade_Dalgona_Coffee.jpg",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "فهوه اسپرسو",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://media.gettyimages.com/photos/closeup-of-coffee-in-cup-picture-id1032751904?s=612x612",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "شیک موز",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2FPhoto%2FRecipes%2F2020-07-how-to-make-a-milkshake-at-home%2F2020-06-08_AT-K19388",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 1,
-  //     title: "فهوه دمی",
-  //     description:
-  //       "قهوه دمی یک نوشدنی علی با بهترین گیفیت است نوشدنی علی با بهترین گیفیت است نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "فهوه ترک",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Homemade_Dalgona_Coffee.jpg/1200px-Homemade_Dalgona_Coffee.jpg",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "فهوه اسپرسو",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://media.gettyimages.com/photos/closeup-of-coffee-in-cup-picture-id1032751904?s=612x612",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "شیک موز",
-  //     description: "قهوه دمی یک نوشدنی علی با بهترین گیفیت است",
-  //     categoryId: 2,
-  //     partner: "hesperso",
-  //     imagePath:
-  //       "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2FPhoto%2FRecipes%2F2020-07-how-to-make-a-milkshake-at-home%2F2020-06-08_AT-K19388",
-  //     enable: true,
-  //     price: "1000 تومان",
-  //   },
-  // ];
+  
   SwiperCore.use([EffectCoverflow, Navigation]);
   const [categorySelected, setCategorySelected] = useState();
   const [category, setCategory] = useState();
@@ -267,7 +88,7 @@ function App() {
         {items ? (
           items.length !== 0 ? (
             items.map((item) => (
-              <div key={item.id} className="items">
+              <div key={item.id} className="itemsbox">
                 <img
                   onError={(event) => {
                     event.target.src = EmptyPic;
@@ -280,7 +101,7 @@ function App() {
                   <h4>{item.description}</h4>
                   <span />
                   <div className="price-container">
-                    <p>{item.price}تومان</p>
+                    <p>{item.price.toLocaleString()} تومان</p>
                   </div>
                 </div>
               </div>
